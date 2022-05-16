@@ -59,6 +59,8 @@ namespace DataDiggersWebApp.Controllers
                     iscopied = true;
                     UploadFile(path+"\\"+filename,filename);
                     //ReadExcelData(filename, path,file);
+
+                    //upload to yugabyte
                     //NPGUpload();
 
                 }

@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\logo.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="wwwroot\js\bootstrap3.3.7.min.js" />
     <None Include="wwwroot\js\jquery-2.2.0.min.js" />
   </ItemGroup>

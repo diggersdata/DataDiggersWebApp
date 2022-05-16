@@ -15,31 +15,39 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+  
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
+
         <div class="container">
+            
             <div class="navbar-header">
+                <a asp-area="" asp-controller="Home" asp-action="Login" class="navbar-brand">
+                    <img src="~/images/logo.jpeg" style="width: 133% !important; margin: -38% 49% 53% 0% !important"/>
+                </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
                 <a asp-area="" asp-controller="Home" asp-action="Login" class="navbar-brand">Data Diggers</a>
             </div>
-            <div class="navbar-collapse collapse">
+            @*<div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="FileUpload">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="FileUpload" class="navbar-brand">Home</a></li>
                 </ul>
-            </div>
+            </div>*@
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - Data Diggers</p>
+            <p>&copy; 2022 - Data Diggers</p>
         </footer>
     </div>
 
@@ -50,15 +58,15 @@
     </environment>
     <environment exclude="Development">
         @*<script src="~/Script/bootstrap3.3.7.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>*@
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk"></script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+            </script>*@
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
@@ -68,8 +76,17 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
 
+    </environment>
+    <style type="text/css">
+        .navbar-inverse .navbar-brand {
+            color: white;
+        }
+
+        .navbar-inverse {
+            background-color: #d71e28;
+        }
+    </style>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
